@@ -323,6 +323,128 @@
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "from_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "count",
+				"type": "uint256"
+			}
+		],
+		"name": "getUserHistory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "transaction_hash",
+						"type": "bytes32"
+					},
+					{
+						"components": [
+							{
+								"internalType": "bool",
+								"name": "is_bridge_redeem",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "from_chain_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "to_chain_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint8",
+								"name": "decimals",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "nonce",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "block_number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum STATE",
+								"name": "state",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct Transaction",
+						"name": "transaction",
+						"type": "tuple"
+					}
+				],
+				"internalType": "struct ICubeRouter.History[]",
+				"name": "history",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			}
+		],
+		"name": "getUserHistoryLength",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "token",
 				"type": "address"
 			}
