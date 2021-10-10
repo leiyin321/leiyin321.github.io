@@ -12,12 +12,12 @@ const HecoProvider = new Web3(new Web3.providers.HttpProvider('https://http-test
 const HecoContract = new HecoProvider.eth.Contract(cubeAbi, hecoAddr)
 
 //oec
-const OecProvider = new Web3(new Web3.providers.HttpProvider('https://exchainrpc.okex.org'))
+const OecProvider = new Web3(new Web3.providers.HttpProvider('https://exchaintestrpc.okex.org'))
 const OecContract = new OecProvider.eth.Contract(cubeAbi, oecAddr)
 
 //eth
 const EthProvider = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'))
-const EthContract = new EthProvider.eth.Contract(cubeAbi, oecAddr)
+const EthContract = new EthProvider.eth.Contract(cubeAbi, ethAddr)
 
 
 
