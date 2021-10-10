@@ -2,9 +2,9 @@ import Web3 from 'web3'
 import cubeAbi from '../abi/CubeRouter.json'
 import erc20abi from '../abi/ERC20.json'
 
-const hecoAddr = '0xA1807b02EA107045d1C5Ef868294881Cd9b20A6c'
-const oecAddr = '0x17971AC1D2830C1AB84a2259585436c5c69C6E4d'
-const ethAddr = '0xbe0b2ab4b7b178040976ee21bd86160E5CEDA34d'
+const hecoAddr = '0x2fAd0985c01aE3712CcBE472603a53E4742Ae602'
+const oecAddr = '0xC55DF71398ba18d1d5E6E3060685EFa8219D4CE0'
+const ethAddr = '0x3c9bE138411FBB681f1dAAC907241D85EE0a6839'
 
 
 // heco
