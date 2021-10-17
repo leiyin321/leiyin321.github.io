@@ -2,6 +2,7 @@ import Web3 from 'web3'
 import cubeAbi from '../abi/CubeRouter.json'
 import erc20abi from '../abi/ERC20.json'
 import cubePollAbi from '../abi/CubePool.json'
+import airDropAbi from '../abi/Airdrop.json'
 import signAbi from '../abi/Sign.json'
 
 const hecoAddr = '0x2fAd0985c01aE3712CcBE472603a53E4742Ae602'
@@ -156,4 +157,4 @@ const chains_params = {
   }
 }
 
-export { chains_params, SignContract, erc20abi, cubePollAbi }
+export { chains_params, SignContract, erc20abi, cubePollAbi, airDropAbi }
