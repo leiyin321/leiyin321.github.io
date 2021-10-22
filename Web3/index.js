@@ -4,6 +4,7 @@ import erc20abi from '../abi/ERC20.json'
 import cubePollAbi from '../abi/CubePool.json'
 import airDropAbi from '../abi/Airdrop.json'
 import signAbi from '../abi/Sign.json'
+import boardAbi from '../abi/BoardRoom.json'
 
 const hecoAddr = '0x2fAd0985c01aE3712CcBE472603a53E4742Ae602'
 const oecAddr = '0xC55DF71398ba18d1d5E6E3060685EFa8219D4CE0'
@@ -36,10 +37,7 @@ const chains_params = {
       decimals: 18
     },
     rpcUrls: ['https://exchainrpc.okex.org'],
-    blockExplorerUrls: ['https://www.oklink.com/okexchain'],
-    provider: OecProvider,
-    contract: OecContract,
-    router_addr: oecAddr
+    blockExplorerUrls: ['https://www.oklink.com/okexchain']
   },
   65: {
     chainId: '0x41',
@@ -87,9 +85,6 @@ const chains_params = {
     },
     rpcUrls: ['https://http-mainnet-node.huobichain.com'],
     blockExplorerUrls: ['https://hecoinfo.com'],
-    provider: HecoProvider,
-    contract: HecoContract,
-    router_addr: hecoAddr
   },
   256: {
     chainId: '0x100',
@@ -115,9 +110,6 @@ const chains_params = {
     },
     rpcUrls: ['https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'],
     blockExplorerUrls: ['https://etherscan.io'],
-    provider: HecoProvider,
-    contract: HecoContract,
-    router_addr: hecoAddr
   },
   4: {
     chainId: '0x04',
@@ -129,9 +121,9 @@ const chains_params = {
     },
     rpcUrls: ['https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'],
     blockExplorerUrls: ['https://rinkeby.etherscan.io'],
-    provider: HecoProvider,
-    contract: HecoContract,
-    router_addr: hecoAddr
+    provider: EthProvider,
+    contract: EthContract,
+    router_addr: ethAddr
   },
   137: {
     chainId: '0x89',
@@ -157,4 +149,4 @@ const chains_params = {
   }
 }
 
-export { chains_params, SignContract, erc20abi, cubePollAbi, airDropAbi }
+export { chains_params, SignContract, erc20abi, cubePollAbi, airDropAbi, boardAbi }
