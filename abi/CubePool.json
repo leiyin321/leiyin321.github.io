@@ -709,6 +709,11 @@
 				"internalType": "uint256",
 				"name": "apy",
 				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "remaining",
+				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -778,6 +783,11 @@
 			{
 				"internalType": "uint256",
 				"name": "apy",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "remaining",
 				"type": "uint256"
 			}
 		],
@@ -873,16 +883,16 @@
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "_token",
+				"name": "_factory",
 				"type": "address"
 			},
 			{
 				"internalType": "address",
-				"name": "_weth",
+				"name": "_token",
 				"type": "address"
 			}
 		],
-		"name": "initialize",
+		"name": "init",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",

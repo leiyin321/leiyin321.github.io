@@ -1,16 +1,17 @@
 [
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_factory",
-				"type": "address"
-			}
-		],
+		"inputs": [],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "constructor"
 	},
 	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -26,10 +27,12 @@
 				"type": "address"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "allPoolsLength",
 		"outputs": [
@@ -39,38 +42,12 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "token",
-				"type": "address"
-			},
-			{
-				"internalType": "bytes32",
-				"name": "transaction_hash",
-				"type": "bytes32"
-			},
-			{
-				"internalType": "bool",
-				"name": "withdraw_token",
-				"type": "bool"
-			},
-			{
-				"internalType": "bytes[]",
-				"name": "sigs",
-				"type": "bytes[]"
-			}
-		],
-		"name": "bridge_fallback",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
+		"constant": false,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -100,73 +77,12 @@
 		],
 		"name": "bridge_transfer",
 		"outputs": [],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "token",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "is_bridge_redeem",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "from_chain_id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address payable",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint8",
-				"name": "decimals",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "nonce",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "block_number",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "withdraw_token",
-				"type": "bool"
-			},
-			{
-				"internalType": "bytes[]",
-				"name": "sigs",
-				"type": "bytes[]"
-			}
-		],
-		"name": "bridge_withdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
+		"constant": false,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -187,10 +103,12 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
+		"constant": false,
 		"inputs": [],
 		"name": "depositETH",
 		"outputs": [
@@ -200,10 +118,12 @@
 				"type": "uint256"
 			}
 		],
+		"payable": true,
 		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "factory",
 		"outputs": [
@@ -213,10 +133,12 @@
 				"type": "address"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -247,10 +169,64 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "getBridgePoolInfos",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "equity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "apy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "token_decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "liquidity_decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "liquidity_token",
+						"type": "address"
+					}
+				],
+				"internalType": "struct ICubeRouter.PoolInfo[]",
+				"name": "poolInfos",
+				"type": "tuple[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -266,10 +242,12 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "getPoolInfos",
 		"outputs": [
@@ -316,10 +294,12 @@
 				"type": "tuple[]"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -399,12 +379,12 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "enum STATE",
+								"internalType": "enum IBridge.STATE",
 								"name": "state",
 								"type": "uint8"
 							}
 						],
-						"internalType": "struct Transaction",
+						"internalType": "struct IBridge.Transaction",
 						"name": "transaction",
 						"type": "tuple"
 					}
@@ -414,10 +394,12 @@
 				"type": "tuple[]"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -438,10 +420,32 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_factory",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_cube_token",
+				"type": "address"
+			}
+		],
+		"name": "init",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -457,10 +461,12 @@
 				"type": "address"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -476,10 +482,12 @@
 				"type": "address"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -495,10 +503,12 @@
 				"type": "string"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": true,
 		"inputs": [],
 		"name": "weth",
 		"outputs": [
@@ -508,10 +518,12 @@
 				"type": "address"
 			}
 		],
+		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"constant": false,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -532,10 +544,12 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
+		"constant": false,
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -551,11 +565,8 @@
 				"type": "uint256"
 			}
 		],
+		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "receive"
 	}
 ]

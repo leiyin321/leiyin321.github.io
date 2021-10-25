@@ -6,9 +6,10 @@ import airDropAbi from '../abi/Airdrop.json'
 import signAbi from '../abi/Sign.json'
 import boardAbi from '../abi/BoardRoom.json'
 
-const hecoAddr = '0x2fAd0985c01aE3712CcBE472603a53E4742Ae602'
-const oecAddr = '0xC55DF71398ba18d1d5E6E3060685EFa8219D4CE0'
-const ethAddr = '0x3c9bE138411FBB681f1dAAC907241D85EE0a6839'
+const hecoAddr = '0x60d1b0a14485c92fFdedDFC126d82375787C7982'
+const oecAddr = '0x8F8526dbfd6E38E3D8307702cA8469Bae6C56C15'
+const ethAddr = '0x4ecdBD14bdD5e7398C9Ff7Dc30287D6AFd7764ee'
+
 const signAddr = '0x57b3f0F4126979ce7DF7A8F035d4Cb195Cbf46d5'
 
 // heco
@@ -51,7 +52,9 @@ const chains_params = {
     blockExplorerUrls: ['https://www.oklink.com/okexchain-test/'],
     provider: OecProvider,
     contract: OecContract,
-    router_addr: oecAddr
+    cubeAddr: oecAddr,
+    airDropAddr: '0xD5D8CB25faEF40ca2ED01440811504472Ca93e26',
+    boardRoomAddr: '0xc030Fd0383D72b7dC3f11Ce666C48f7f69adb113'
   },
   56: {
     chainId: '0x38',
@@ -98,7 +101,7 @@ const chains_params = {
     blockExplorerUrls: ['https://testnet.hecoinfo.com'],
     provider: HecoProvider,
     contract: HecoContract,
-    router_addr: hecoAddr
+    cubeAddr: hecoAddr
   },
   1: {
     chainId: '0x01',
@@ -123,7 +126,9 @@ const chains_params = {
     blockExplorerUrls: ['https://rinkeby.etherscan.io'],
     provider: EthProvider,
     contract: EthContract,
-    router_addr: ethAddr
+    cubeAddr: ethAddr,
+    airDropAddr: '0xBF93b66EEC51Cb9C59eCA46EE69c533bEB9b824c',
+    boardRoomAddr: '0x4E9F8807032D4e5E6f0561f898AbBEA010dc6eC9'
   },
   137: {
     chainId: '0x89',
