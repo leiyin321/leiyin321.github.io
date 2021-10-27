@@ -53,8 +53,8 @@ const chains_params = {
     provider: OecProvider,
     contract: OecContract,
     cubeAddr: oecAddr,
-    airDropAddr: '0xD5D8CB25faEF40ca2ED01440811504472Ca93e26',
-    boardRoomAddr: '0xc030Fd0383D72b7dC3f11Ce666C48f7f69adb113'
+    
+
   },
   56: {
     chainId: '0x38',
@@ -101,7 +101,9 @@ const chains_params = {
     blockExplorerUrls: ['https://testnet.hecoinfo.com'],
     provider: HecoProvider,
     contract: HecoContract,
-    cubeAddr: hecoAddr
+    cubeAddr: hecoAddr,
+    airDropAddr: '0xD5D8CB25faEF40ca2ED01440811504472Ca93e26',
+    boardRoomAddr: '0xc030Fd0383D72b7dC3f11Ce666C48f7f69adb113'
   },
   1: {
     chainId: '0x01',
