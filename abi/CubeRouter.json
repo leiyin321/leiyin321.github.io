@@ -77,8 +77,8 @@
 		],
 		"name": "bridge_transfer",
 		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
+		"payable": true,
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -103,8 +103,8 @@
 				"type": "uint256"
 			}
 		],
-		"payable": false,
-		"stateMutability": "nonpayable",
+		"payable": true,
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
