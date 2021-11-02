@@ -7,7 +7,7 @@ import signAbi from '../abi/Sign.json'
 import boardAbi from '../abi/BoardRoom.json'
 
 const hecoAddr = '0x60d1b0a14485c92fFdedDFC126d82375787C7982'
-const oecAddr = '0x8F8526dbfd6E38E3D8307702cA8469Bae6C56C15'
+const oecAddr = '0xC55DF71398ba18d1d5E6E3060685EFa8219D4CE0'
 const ethAddr = '0x4ecdBD14bdD5e7398C9Ff7Dc30287D6AFd7764ee'
 
 const signAddr = '0x57b3f0F4126979ce7DF7A8F035d4Cb195Cbf46d5'
